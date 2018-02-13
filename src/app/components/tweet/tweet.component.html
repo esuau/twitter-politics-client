@@ -1,3 +1,4 @@
+<div>&nbsp;</div>
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
@@ -11,7 +12,13 @@
     <p>{{ tweet.content }}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+    <button mat-button>
+      <mat-icon>favorite</mat-icon>
+      LIKE
+    </button>
+    <button mat-button>
+      <mat-icon>repeat</mat-icon>
+      SHARE
+    </button>
   </mat-card-actions>
 </mat-card>

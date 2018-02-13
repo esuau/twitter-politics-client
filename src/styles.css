@@ -1,7 +1,11 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/dist/css/bootstrap-grid.min.css";
 
 body,
 html {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   margin: 0;
+}
+
+button {
+  outline: 0;
 }
