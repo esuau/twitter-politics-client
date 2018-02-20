@@ -1,4 +1,6 @@
 export class Tweet {
+  id?: number;
   author: string;
-  content: string;
+  text: string;
+  createdAt: Date;
 }

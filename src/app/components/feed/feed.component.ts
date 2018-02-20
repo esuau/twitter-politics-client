@@ -9,10 +9,7 @@ import { TwitterService } from '../../services/twitter.service';
 })
 export class FeedComponent implements OnInit {
 
-  tweets: Array<Tweet> = [
-    { author: 'Noel Diril', content: 'Hello World Motherfucker !' },
-    { author: 'Evan Suau', content: 'Hello World Man !' }
-  ]
+  tweets: Array<Tweet> = [];
 
   constructor( private _service: TwitterService ) {
     this._service.getTweets().subscribe(

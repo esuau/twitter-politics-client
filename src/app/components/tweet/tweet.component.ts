@@ -8,10 +8,7 @@ import { Tweet } from '../../definitions/tweet.definition';
 })
 export class TweetComponent implements OnInit {
 
-  @Input() tweet: Tweet = {
-    author: 'Evan',
-    content: 'Hello World !'
-  };
+  @Input() tweet: Tweet = new Tweet();
 
   constructor() { }
 
