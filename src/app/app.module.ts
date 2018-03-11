@@ -5,9 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
 import { MatButtonModule } from "@angular/material/button";
+import { MatFormFieldModule } from '@angular/material';
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from "@angular/material/toolbar";
+import {MatInputModule} from '@angular/material/input';
+
+
 
 import { AppRoutingModule } from './app.routing';
 
@@ -16,6 +20,7 @@ import { FeedComponent } from "./components/feed/feed.component";
 import { TweetComponent } from "./components/tweet/tweet.component";
 import { TwitterService } from "./services/twitter.service";
 import { AuthComponent } from './components/auth/auth.component';
+
 
 @NgModule({
   declarations: [AppComponent, FeedComponent, TweetComponent, AuthComponent],
@@ -27,7 +32,9 @@ import { AuthComponent } from './components/auth/auth.component';
     HttpModule,
     MatButtonModule,
     MatCardModule,
+    MatInputModule,
     MatIconModule,
+    MatFormFieldModule,
     MatToolbarModule
   ],
   providers: [TwitterService],
