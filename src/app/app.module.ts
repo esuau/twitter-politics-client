@@ -23,6 +23,7 @@ import { AuthComponent } from './components/auth/auth.component';
 
 import { AuthService } from "./services/auth.service";
 import { TwitterService } from "./services/twitter.service";
+import { TrendService } from "./services/trend.service";
 
 @NgModule({
   declarations: [AppComponent, FeedComponent, TweetComponent, AuthComponent],
@@ -42,7 +43,7 @@ import { TwitterService } from "./services/twitter.service";
     MatMenuModule,
     MatProgressSpinnerModule
   ],
-  providers: [AuthService, TwitterService],
+  providers: [AuthService, TwitterService, TrendService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,24 +1,35 @@
 <div class="row">
   <div class="col-1">
-      <button mat-mini-fab [matMenuTriggerFor]="menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="loadTweets()">
-            <mat-icon>message</mat-icon>
-            <span>All tweets</span>
-          </button>
-          <button mat-menu-item (click)="loadMorningTweets()">
-            <mat-icon>alarm_on</mat-icon>
-            <span>Breakfast tweets</span>
-          </button>
-        </mat-menu>
+    <button mat-mini-fab [matMenuTriggerFor]="menu1">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu1="matMenu">
+      <button mat-menu-item (click)="loadTweets()">
+        <mat-icon>message</mat-icon>
+        <span>All tweets</span>
+      </button>
+      <button mat-menu-item (click)="loadMorningTweets()">
+        <mat-icon>alarm_on</mat-icon>
+        <span>Breakfast tweets</span>
+      </button>
+    </mat-menu>
   </div>
   <div class="col-1">
-    <button mat-mini-fab>
-      <mat-icon (click)="loadTweets()">refresh</mat-icon>
+    <button mat-mini-fab [matMenuTriggerFor]="menu2">
+      <mat-icon>label_outline</mat-icon>
     </button>
+    <mat-menu #menu2="matMenu" *ngFor="let trend of trends">
+      <button mat-menu-item>
+        <mat-icon>label</mat-icon>
+        <span>trend.name</span>
+      </button>
+    </mat-menu>
   </div>
+  <div class="col-1">
+      <button mat-mini-fab>
+        <mat-icon (click)="loadTweets()">refresh</mat-icon>
+      </button>
+    </div>
 </div>
 <div class="row" *ngIf="showSpinner" style="margin-top: 10%;">
   <div class="col-5"></div>
