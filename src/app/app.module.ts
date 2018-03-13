@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -36,7 +37,8 @@ import { TwitterService } from "./services/twitter.service";
     MatInputModule,
     MatIconModule,
     MatFormFieldModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule
   ],
   providers: [AuthService, TwitterService],
   bootstrap: [AppComponent]

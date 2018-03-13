@@ -18,12 +18,12 @@ export class AppComponent {
     }
   }
 
-  signIn() {
+  public signIn(): void {
     this.signedIn = true;
     this._router.navigate(['/feed']);
   }
 
-  logOut() {
+  public logOut(): void {
     this.signedIn = false;
     this._router.navigate(['/auth']);
   }

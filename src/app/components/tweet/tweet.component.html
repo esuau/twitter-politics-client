@@ -21,5 +21,8 @@
       <mat-icon>repeat</mat-icon>
       SHARE
     </button>
+    <small>
+        {{ tweet.createdAt | date: 'full' }}
+    </small>
   </mat-card-actions>
 </mat-card>

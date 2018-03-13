@@ -1,3 +1,25 @@
+<div class="row">
+  <div class="col-1">
+      <button mat-mini-fab [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="loadTweets()">
+            <mat-icon>message</mat-icon>
+            <span>All tweets</span>
+          </button>
+          <button mat-menu-item click="loadMorningTweets()">
+            <mat-icon>alarm_on</mat-icon>
+            <span>Breakfast tweets</span>
+          </button>
+        </mat-menu>
+  </div>
+  <div class="col-1">
+    <button mat-mini-fab>
+      <mat-icon (click)="loadTweets()">refresh</mat-icon>
+    </button>
+  </div>
+</div>
 <div class="row" *ngFor="let tweet of tweets">
   <app-tweet [tweet]="tweet" class="col"></app-tweet>
 </div>
