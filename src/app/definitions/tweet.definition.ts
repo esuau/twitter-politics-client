@@ -1,6 +1,8 @@
+import { User } from './user.definition';
+
 export class Tweet {
-  id?: number;
-  author: string;
-  text: string;
+  id: number;
   createdAt: Date;
+  text: string;
+  user: User;
 }
