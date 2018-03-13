@@ -14,7 +14,7 @@ export class AuthService {
    * @return {Observable<boolean>} true if the credential is correct, false if not.
    */
   public checkCredentials( password: string ): Observable<boolean> {
-    return this._http.post( 'https://twitter-politics-server-staging.azurewebsites.net/service/auth', password )
+    return this._http.post( 'https://twitter-politics-server-staging.azurewebsites.net/service/authentication', password )
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || "Server error")
     );
