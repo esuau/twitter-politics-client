@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -38,7 +39,8 @@ import { TwitterService } from "./services/twitter.service";
     MatIconModule,
     MatFormFieldModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressSpinnerModule
   ],
   providers: [AuthService, TwitterService],
   bootstrap: [AppComponent]
