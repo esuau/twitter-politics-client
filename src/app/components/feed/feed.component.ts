@@ -53,4 +53,8 @@ export class FeedComponent implements OnInit {
     )
   }
 
+  public filterTrends( trend: Trend ): void {
+    this.tweets = this.tweets.filter( (tweet: Tweet) => tweet.text.indexOf(trend.name) >= 0 );
+  }
+
 }

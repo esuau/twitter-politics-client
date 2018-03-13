@@ -20,7 +20,7 @@
     </button>
   </div>
   <div class="col">
-    <button mat-button *ngFor="let trend of trends">
+    <button mat-button *ngFor="let trend of trends" (click)="filterTrends(trend)">
       <small>{{ trend.name }}</small>
     </button>
   </div>
