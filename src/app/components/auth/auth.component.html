@@ -1,0 +1,14 @@
+<mat-card>
+  <h3>
+    Sign in
+  </h3>
+  <div>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" [(ngModel)]="password">
+      <mat-error *ngIf="incorrectPassword">
+        Please enter a valid password
+      </mat-error>
+    </mat-form-field>
+    <button mat-button (click)="signIn()">LOG IN</button>
+  </div>
+</mat-card>

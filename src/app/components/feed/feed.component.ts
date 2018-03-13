@@ -9,19 +9,27 @@ import { TwitterService } from '../../services/twitter.service';
 })
 export class FeedComponent implements OnInit {
 
-  tweets: Array<Tweet> = [
-    { author: 'Noel Diril', content: 'Hello World Motherfucker !' },
-    { author: 'Evan Suau', content: 'Hello World Man !' }
-  ]
+  tweets: Array<Tweet> = [];
 
   constructor( private _service: TwitterService ) {
+    this.loadTweets();
+  }
+
+  ngOnInit() {
+  }
+
+  public loadTweets(): void {
     this._service.getTweets().subscribe(
       (data: Array<Tweet>) => this.tweets = data,
       error => console.error(error)
     );
   }
 
-  ngOnInit() {
+  public loadMorningTweets(): void {
+    this._service.getMorningTweets().subscribe(
+      (data: Array<Tweet>) => this.tweets = data,
+      error => console.error(error)
+    );
   }
 
 }
