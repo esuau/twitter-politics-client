@@ -1,7 +1,7 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { FeedComponent } from './components/feed/feed.component';
-import { AuthComponent } from "./components/auth/auth.component";
+import { AuthComponent } from './components/auth/auth.component';
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "/feed", pathMatch: "full" },
